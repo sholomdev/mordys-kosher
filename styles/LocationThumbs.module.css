@@ -1,0 +1,22 @@
+.LocationThumbs {
+  display: flex;
+  padding: 5rem 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  /* margin-top: -2px; */
+}
+.LocationThumbs h1 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.thumbContainer {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

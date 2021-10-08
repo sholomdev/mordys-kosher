@@ -1,9 +1,73 @@
+@font-face {
+  font-family: 'Josefine Sans';
+  src: url('../public/fonts/JosefinSans-VariableFont_wght.ttf'),
+    url('../public/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Italic.ttf');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../public/fonts/Lato-Thin.ttf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'blacklite_demoregular';
+  src: url('../public/fonts/blacklite_demo-webfont.woff2') format('woff2'),
+    url('../public/fonts/blacklite_demo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --highlight: rgb(241, 102, 9);
+  --bg-color: rgb(26, 26, 22);
+}
+
+.highlight {
+  color: var(--highlight);
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #f8f8ff;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Josefine Sans', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {

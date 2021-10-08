@@ -1,0 +1,71 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 20rem;
+  background-color: rgb(21, 21, 21);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(26, 27, 22, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    url('/images/footer-bg.png');
+  background-size: 280px;
+  background-repeat: repeat-x;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: -1px; */
+  background-position: top 100% left 0;
+}
+
+.copyright {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+}
+.footer ul li ul {
+  display: none;
+}
+.footer ul {
+  display: grid;
+  grid-template-columns: max-content clamp(100px, 20vw, 250px) max-content;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer ul :global(#logo) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+  justify-self: center;
+}
+.footer ul a {
+  transition: all 0.3s;
+}
+
+.footer ul a:hover {
+  transform: scale(1.05);
+  color: var(--highlight);
+}
+.footer li:nth-child(2),
+.footer li:nth-child(5),
+.footer li:nth-child(7) {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer ul {
+    grid-template-columns: 1fr clamp(100px, 30vw, 200px) 1fr;
+  }
+
+  .copyright {
+    font-size: smaller;
+  }
+}

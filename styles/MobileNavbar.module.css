@@ -1,0 +1,34 @@
+.mobileNavbar {
+  display: none;
+}
+
+.mobileNavbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mobileNavbar nav ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(220, 220, 220);
+  transition: all 0.1s ease-in-out;
+}
+
+.mobileNavbar a:hover {
+  color: var(--highlight);
+}
+.mobileNavbar ul li ul {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: smaller;
+  gap: 1rem;
+}
+@media screen and (max-width: 950px) {
+  .mobileNavbar {
+    display: block;
+  }
+}
