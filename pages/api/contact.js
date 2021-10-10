@@ -17,7 +17,6 @@ async function sendEmail(req, res) {
          <li><strong>Message:</strong>${req.body.data.message}</li>
          </ul>`,
   };
-  console.log(message);
   try {
     await sendgrid.send(message);
   } catch (error) {

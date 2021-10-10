@@ -10,8 +10,9 @@ import Header from '@/components/Header';
 import Carousel from '@/components/Carousel';
 
 export default function LocationPage({ location, locations, menuItems }) {
-  const otherLocations = locations.filter((loc) => loc.id !== location.id);
-  console.log(otherLocations);
+  const otherLocations = locations
+    ? locations.filter((loc) => loc.id !== location.id)
+    : null;
   return (
     <Layout title={`Mordy's Kosher at ${location.name}`}>
       <Header title={`${location.name}`} bg={location.headerImage.url} />
@@ -111,31 +112,32 @@ export default function LocationPage({ location, locations, menuItems }) {
           alt=""
         ></Image>
       </div>
-      <div className={styles.nextLocationLinks}>
-        <Link href={otherLocations[0].slug}>
-          <a>
-            <span className="highlight">&lt;&nbsp;</span>{' '}
-            {otherLocations[0].name}
-          </a>
-        </Link>
+      {otherLocations && (
+        <div className={styles.nextLocationLinks}>
+          <Link href={otherLocations[0].slug}>
+            <a>
+              <span className="highlight">&lt;&nbsp;</span>{' '}
+              {otherLocations[0].name}
+            </a>
+          </Link>
 
-        <Link href="/gallery">
-          <a
-            title="Gallery"
-            className="highlight"
-            style={{ fontSize: '1.5rem', textAlign: '', margin: '0 .5rem' }}
-          >
-            <FaThLarge />
-          </a>
-        </Link>
-        <Link href={otherLocations[1].slug}>
-          <a>
-            {' '}
-            {otherLocations[1].name}{' '}
-            <span className="highlight">&nbsp;&gt;</span>
-          </a>
-        </Link>
-      </div>
+          <Link href="/gallery">
+            <a
+              title="Gallery"
+              className="highlight"
+              style={{ fontSize: '1.5rem', textAlign: '', margin: '0 .5rem' }}
+            >
+              <FaThLarge />
+            </a>
+          </Link>
+          <Link href={otherLocations[1].slug}>
+            <a>
+              {otherLocations[1].name}
+              <span className="highlight">&nbsp;&gt;</span>
+            </a>
+          </Link>
+        </div>
+      )}
     </Layout>
   );
 }
@@ -162,7 +164,6 @@ export async function getStaticProps({ params: { slug } }) {
 
   const menuRes = await fetch(`${API_URL}/menus?_location=${locationId}`);
   const menuItems = await menuRes.json();
-  console.log(menuItems);
 
   return {
     props: {
