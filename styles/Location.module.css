@@ -87,6 +87,9 @@
   .imageContainer {
     flex-basis: auto;
   }
+  .location {
+    justify-content: center;
+  }
 
   .imageContainer:nth-child(2) {
     display: none;

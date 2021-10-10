@@ -1,0 +1,105 @@
+.contactPage {
+  display: flex;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contactPage li {
+  width: max-content;
+  margin: 1rem 0;
+}
+
+.contactPage section {
+  padding-top: 3rem;
+  min-height: 40rem;
+}
+.contactForm {
+  width: 100%;
+  padding-left: 3rem;
+  border-right-width: 0;
+  border-left-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.39),
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
+}
+.contactForm form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+/* 
+.contactPage label[for='name'],
+.contactPage label[for='email'] { */
+
+.contactPage label {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
+  flex-direction: column;
+  margin: 0.5rem;
+  gap: 1rem;
+}
+.contactPage p,
+.contactPage h4 {
+  margin: 0;
+  align-self: end;
+}
+.contactPage label[for='message'] {
+  grid-template-rows: 3rem 12rem;
+}
+
+.contactPage label input,
+.contactPage textarea {
+  grid-column: span 2;
+}
+
+.contactPage label[for='message'] {
+  grid-column: span 2;
+}
+
+.contactPage input,
+.contactPage textarea,
+.contactPage button {
+  border-radius: 25px;
+  font-family: 'Josefine Sans';
+  background-color: var(--bg-color);
+  border: 1px solid white;
+  height: 3rem;
+  color: white;
+  padding: 0.7rem 1rem;
+}
+.contactPage textarea {
+  height: 100%;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+.contactPage button {
+  grid-column: 2;
+  justify-self: right;
+  width: 6rem;
+  padding: 0.7rem 1rem 0.6rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+.contactPage button:hover,
+.contactPage button:focus {
+  background-color: var(--highlight);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.error {
+  color: rgb(194, 3, 3);
+  justify-self: end;
+  font-size: smaller;
+  align-self: end;
+}

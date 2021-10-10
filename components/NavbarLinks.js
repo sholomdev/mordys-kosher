@@ -55,7 +55,7 @@ export default function NavbarLinks({ mobile, locations }) {
         </Link>
       </li>
       <li>
-        <Link href="/contact-us">
+        <Link href="/contact">
           <a>Contact Us</a>
         </Link>
       </li>
