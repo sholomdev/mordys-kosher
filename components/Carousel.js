@@ -6,7 +6,7 @@ import styles from '@/styles/Carousel.module.css';
 
 const EmblaCarousel = ({ menuItems }) => {
   const [viewportRef, embla] = useEmblaCarousel({
-    loop: true,
+    loop: false,
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
