@@ -10,9 +10,9 @@ import Header from '@/components/Header';
 import Carousel from '@/components/Carousel';
 
 export default function LocationPage({ location, locations, menuItems }) {
-  const otherLocations = locations
-    ? locations.filter((loc) => loc.id !== location.id)
-    : null;
+  if (!location || !locations) return <h1>Loading</h1>;
+  const otherLocations = locations.filter((loc) => loc.id !== location.id);
+
   return (
     <Layout title={`Mordy's Kosher at ${location.name}`}>
       <Header title={`${location.name}`} bg={location.headerImage.url} />
