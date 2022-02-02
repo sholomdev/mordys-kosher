@@ -10,8 +10,8 @@ export default function Header({ bg = defaultBg, title }) {
           src={bg}
           layout="fill"
           objectFit="cover"
-          quality={100}
-          priority
+          quality={90}
+          priority={true}
         ></Image>
         <h1 className={styles.bgText}>{title}</h1>
       </div>

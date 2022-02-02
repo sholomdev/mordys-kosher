@@ -60,16 +60,18 @@ export default function LocationPage({ location, locations, menuItems }) {
             <li>
               <div></div>
               <div>
-                <span className="highlight">Operated By:&nbsp; </span>{' '}
+                <span className="highlight">Operated By:&nbsp; </span>
                 {location.operatedBy}
               </div>
             </li>
             <li>
               <div></div>
-              <div>
-                <span className="highlight">Kosher Supervision:&nbsp; </span>{' '}
-                {location.kashrut}
-              </div>
+              {location.kashrut && (
+                <div>
+                  <span className="highlight">Kosher Supervision:&nbsp; </span>
+                  {location.kashrut}
+                </div>
+              )}
             </li>
           </ul>
         </div>

@@ -4,29 +4,36 @@
     url('../public/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../public/fonts/Lato-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../public/fonts/Lato-Bold.ttf');
+  font-display: swap;
   font-weight: bold;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../public/fonts/Lato-Italic.ttf');
+  font-display: swap;
   font-style: italic;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../public/fonts/Lato-Light.ttf');
+  font-display: swap;
   font-weight: 300;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../public/fonts/Lato-Thin.ttf');
+  font-display: swap;
   font-weight: 100;
 }
 
@@ -34,12 +41,13 @@
   font-family: 'blacklite_demoregular';
   src: url('../public/fonts/blacklite_demo-webfont.woff2') format('woff2'),
     url('../public/fonts/blacklite_demo-webfont.woff') format('woff');
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
 :root {
   --highlight: rgb(241, 102, 9);
-  --bg-color: rgb(26, 26, 22);
+  --bg-color: rgb(27, 28, 23);
 }
 
 .highlight {
