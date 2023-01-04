@@ -3,9 +3,8 @@ import styles from '../styles/Home.module.css';
 import Hero from '@/components/Hero';
 import AboutMordy from '@/components/AboutMordy';
 import LocationThumbs from '@/components/LocationThumbs';
-import { API_URL } from '../config';
 import Events from '@/components/Events';
-import getLocationSlugs from '../lib/locationSlugs';
+import locationData from 'locationData';
 
 export default function Home({ locations, events }) {
   return (
@@ -21,16 +20,10 @@ export default function Home({ locations, events }) {
 }
 
 export async function getStaticProps() {
-  const resLocations = await fetch(`${API_URL}/locations`);
-  const locations = await resLocations.json();
-
-  const locationSlugs = await getLocationSlugs();
-
-  const resEvents = await fetch(`${API_URL}/events?_sort=date:ASC&_limit=3`);
-  const events = await resEvents.json();
+  const locations = locationData;
+  const events = '';
 
   return {
     props: { locations, events },
-    revalidate: 60 * 60 * 24,
   };
 }

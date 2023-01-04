@@ -36,5 +36,6 @@ Layout.defaultProps = {
     { slug: 'mccormick-place', name: 'McCormick Place', id: 1 },
     { slug: 'wells-fargo-center', name: 'Wells Fargo Center', id: 2 },
     { slug: 'soldier-field', name: 'Soldier Field', id: 3 },
+    { slug: 'united-center', name: 'United Center', id: 4 },
   ],
 };

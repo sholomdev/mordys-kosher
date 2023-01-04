@@ -13,7 +13,7 @@ export default function LocationThumbs({ locations }) {
         {locations.map((location) => (
           <LocationThumb
             key={location.id}
-            img={location.aboutImage.url}
+            img={location.aboutImage}
             name={location.name}
             slug={location.slug}
           ></LocationThumb>

@@ -60,7 +60,7 @@ const EmblaCarousel = ({ menuItems }) => {
                         layout="fill"
                         className={styles.image}
                         objectFit="cover"
-                        src={item.image.url}
+                        src={item.image}
                         alt=""
                       />
                     </div>

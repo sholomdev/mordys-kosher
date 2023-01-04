@@ -35,7 +35,7 @@ export default function CotactPage() {
 
       const { error } = await res.json();
       if (error) {
-        console.log(error);
+        // console.log(error);
         return;
       }
     }

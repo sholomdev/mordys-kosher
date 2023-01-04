@@ -8,7 +8,7 @@ export default function LocationThumb({ img, name, slug }) {
         <div className={styles.locationThumb}>
           <div className={styles.thumb}>
             <Image
-              alt="McCormick Place"
+              alt={name}
               src={img}
               layout="fill"
               objectFit="cover"
