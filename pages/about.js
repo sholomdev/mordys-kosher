@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { API_URL } from '../config';
 import styles from '@/styles/About.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';

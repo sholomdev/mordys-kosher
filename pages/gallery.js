@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import { API_URL } from '../config';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import styles from '@/styles/GalleryPage.module.css';
@@ -89,11 +88,12 @@ export default function GalleryPage({ images }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/gallery`);
-  const gallery = await res.json();
+  const gallery = Array.from({ length: 19 }, (x, i) => i).map((i) => ({
+    id: i,
+    url: `/images/gallery/${i}.jpg`,
+  }));
 
   return {
-    props: { images: gallery.images },
-    revalidate: 60 * 60 * 24,
+    props: { images: gallery },
   };
 }

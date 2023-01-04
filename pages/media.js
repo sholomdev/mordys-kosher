@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import bg from '../public/images/headerBGs/news-bg.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { API_URL } from '../config';
+import { mediaData } from 'data';
 export default function MediaPage({ articles }) {
   return (
     <Layout>
@@ -16,7 +16,7 @@ export default function MediaPage({ articles }) {
             <li key={article.id}>
               <div className={styles.imageContainer}>
                 <Image
-                  src={article.image.url}
+                  src={article.image}
                   alt=""
                   layout="fill"
                   objectFit="contain"
@@ -43,8 +43,7 @@ export default function MediaPage({ articles }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/articles`);
-  const articles = await res.json();
+  const articles = mediaData;
 
   return {
     props: { articles },

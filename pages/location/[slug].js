@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import Carousel from '@/components/Carousel';
 import LocationDetails from '@/components/LocationDetails';
 import OtherLocationLinks from '@/components/OtherLocationsLinks';
-import locationData from '../../locationData';
+import { locationData } from '../../data';
 
 export default function LocationPage({ location, locations }) {
   if (!location || !locations) return <h1>Loading</h1>;

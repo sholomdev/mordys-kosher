@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import AboutMordy from '@/components/AboutMordy';
 import LocationThumbs from '@/components/LocationThumbs';
 import Events from '@/components/Events';
-import locationData from 'locationData';
+import { locationData } from 'data';
 
 export default function Home({ locations, events }) {
   return (
@@ -21,7 +21,7 @@ export default function Home({ locations, events }) {
 
 export async function getStaticProps() {
   const locations = locationData;
-  const events = '';
+  const events = [];
 
   return {
     props: { locations, events },
