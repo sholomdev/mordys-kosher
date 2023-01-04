@@ -46,7 +46,7 @@ const EmblaCarousel = ({ menuItems }) => {
           <div className={styles.embla__container}>
             {menuItems &&
               menuItems.map((item) => (
-                <div className={styles.embla__slide} key={item.id}>
+                <div className={styles.embla__slide} key={item.name}>
                   <div className={styles.body}>
                     <h4>{item.name}</h4>
                     {item.note && <h5>{item.note}</h5>}

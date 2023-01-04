@@ -8,7 +8,7 @@ export default function OtherLocationLinks({ otherLocations }) {
     <>
       {otherLocations.length > 0 && (
         <div className={styles.nextLocationLinks}>
-          <Link href={otherLocations[0].slug}>
+          <Link href={`/location/${otherLocations[0].slug}`}>
             <a>
               <span className="highlight">&lt;&nbsp;</span>{' '}
               {otherLocations[0].name}
@@ -24,7 +24,7 @@ export default function OtherLocationLinks({ otherLocations }) {
               <FaThLarge />
             </a>
           </Link>
-          <Link href={otherLocations[1].slug}>
+          <Link href={`/location/${otherLocations[1].slug}`}>
             <a>
               {otherLocations[1].name}
               <span className="highlight">&nbsp;&gt;</span>
