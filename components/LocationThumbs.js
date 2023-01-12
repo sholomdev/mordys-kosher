@@ -12,7 +12,7 @@ export default function LocationThumbs({ locations }) {
       <div className={styles.thumbContainer}>
         {locations.map((location) => (
           <LocationThumb
-            key={location.id}
+            key={location.slug}
             img={location.aboutImage}
             name={location.name}
             slug={location.slug}
