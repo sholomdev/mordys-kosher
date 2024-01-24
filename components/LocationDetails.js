@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '@/styles/Location.module.css';
-import { FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaClock, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import { ImPhone } from 'react-icons/im';
 export default function LocationDetails({ location }) {
   return (
@@ -36,13 +36,35 @@ export default function LocationDetails({ location }) {
               </div>
             </li>
           )}
-          <li>
-            <div></div>
-            <div>
-              <span className="highlight">Manager:&nbsp; </span>{' '}
-              {location.manager}
-            </div>
-          </li>
+          {location.manager && (
+            <li>
+              <div></div>
+              <div>
+                <span className="highlight">Manager:&nbsp; </span>{' '}
+                {location.manager}
+              </div>
+            </li>
+          )}
+          {location.email && (
+            <li>
+              <span className="highlight">
+                <FaEnvelope />
+              </span>
+              <div>
+                <span className="highlight">Email:&nbsp; </span>{' '}
+                {location.email}
+              </div>
+            </li>
+          )}
+          {location.contact && (
+            <li>
+              <div></div>
+              <div>
+                <span className="highlight">Contact:&nbsp; </span>{' '}
+                {location.contact}
+              </div>
+            </li>
+          )}
 
           <li>
             <div></div>

@@ -12,7 +12,7 @@ const locationData = [
     detailsImage: '/images/mccormick-details.jpg',
     aboutImage: '/images/mccormick-place.jpg',
     about: `This is our flagship location, where Mordy launched his first kosher food cart in 2010. Some have even remarked that it is here where one can taste all the flavors of the world. After all, merchants from every corner on earth gather here to peddle their wares.
-\nChicago’s McCormick Place is the largest convention center in North America. As early as 1927, Robert R. McCormick, championed a lakeside convention center for Chicago. Located just minutes from downtown Chicago, it attracts close to three million visitors each year and boasts 2.6 million square feet of exhibit space. 
+\nChicago’s McCormick Place is the largest convention center in North America. As early as 1927, Robert R. McCormick, championed a lakeside convention center for Chicago. Located just minutes from downtown Chicago, it attracts close to three million visitors each year and boasts 2.6 million square feet of exhibit space.
 `,
     toppingImage: '/images/toppings.jpg',
     menuItems: [
@@ -86,7 +86,7 @@ const locationData = [
     kashrut: 'Mashgiach temidi at the stand',
     detailsImage: '/images/soldier-field-chicago.jpg',
     aboutImage: '/images/soldier-field-1.jpg',
-    about: `Celebrate every Bears touchdown and pick-six with us behind the south end-zone. Our red hot grill is fired up for our complete Chicago style topping bar. 
+    about: `Celebrate every Bears touchdown and pick-six with us behind the south end-zone. Our red hot grill is fired up for our complete Chicago style topping bar.
 \nSoldier Field opened in 1924 and was designated a memorial to U.S. soldiers who fell in combat. It is home to the Chicago Bears and is the second-oldest stadium in the NFL. The stadium also hosts concerts, rodeos, open-air operas, and soccer. `,
     toppingImage: '/images/toppings.jpg',
     menuItems: [
@@ -154,14 +154,16 @@ const locationData = [
       '3601 S Broad St, Philadelphia, PA 19148, just off the main concourse by section 120 / 121',
     hours:
       'When gates open (usually 2 hours before an event) until you are full. Not open Friday night and Saturday.',
-    phone: '312-825-1113',
-    manager: ' Andy Kiriloff',
+    phone: '215-917-0209',
+    manager: '',
+    contact: 'David Kushner',
+    email: 'philly@mordyskosher.com',
     operatedBy: 'Kosher Concessions Philly LLC',
     kashrut: 'Community Kashrus of Greater Philadelphia, The Keystone-K',
     detailsImage: '/images/wells-fargo.jpg',
     aboutImage: '/images/wells-fargo-floor.jpg',
-    about: `Mordy’s Kosher and Philly have a lot in common: Food, sports, and history. Celebrate the home that Dr. J and Sir Charles Barkley built, with our famous soft pretzel in one hand and Mordy’s Hot Dog in the other. 
- \nThe Wells Fargo Center is one of the busiest arenas in the world and home to the Philadelphia 76ers and Philadelphia Flyers. The arena has also hosted the 2000 Republican National Convention and the 2016 Democratic National Convention. 
+    about: `Mordy’s Kosher and Philly have a lot in common: Food, sports, and history. Celebrate the home that Dr. J and Sir Charles Barkley built, with our famous soft pretzel in one hand and Mordy’s Hot Dog in the other.
+ \nThe Wells Fargo Center is one of the busiest arenas in the world and home to the Philadelphia 76ers and Philadelphia Flyers. The arena has also hosted the 2000 Republican National Convention and the 2016 Democratic National Convention.
 `,
     toppingImage: '/images/toppings.jpg',
     menuItems: [
