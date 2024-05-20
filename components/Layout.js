@@ -37,5 +37,6 @@ Layout.defaultProps = {
     { slug: 'wells-fargo-center', name: 'Wells Fargo Center', id: 2 },
     { slug: 'soldier-field', name: 'Soldier Field', id: 3 },
     { slug: 'united-center', name: 'United Center', id: 4 },
+    { slug: 'citizens-bank-park', name: 'Citizens Bank Park', id: 5 },
   ],
 };

@@ -11,6 +11,23 @@ import { locationData } from '../../data';
 export default function LocationPage({ location, locations }) {
   if (!location || !locations) return <h1>Loading</h1>;
   const otherLocations = locations.filter((loc) => loc.slug !== location.slug);
+
+  if (location.comingSoonImage) {
+    return (
+      <Layout title={`Mordy's Kosher at ${location.name}`}>
+        <Header title={`${location.name}`} bg={location.headerImage} />
+        <div className={styles.comingSoon}>
+          <Image
+            src={location.comingSoonImage}
+            alt={location.name + ' coming soon.'}
+            width={500}
+            height={650}
+            objectFit="contain"
+          ></Image>
+        </div>
+      </Layout>
+    );
+  }
   return (
     <Layout title={`Mordy's Kosher at ${location.name}`}>
       <Header title={`${location.name}`} bg={location.headerImage} />

@@ -226,6 +226,13 @@ const locationData = [
     ],
   },
   {
+    name: 'Citizens Bank Park',
+    slug: 'citizens-bank-park',
+    headerImage: '/images/headerBGs/citizens-bank.jpg',
+    comingSoonImage: '/images/citizens-bank-coming-soon.jpg',
+    aboutImage: '/images/citizens-about.jpg',
+  },
+  {
     name: 'United Center',
     slug: 'united-center',
     headerImage: '/images/headerBGs/united-center-2.jpg',
