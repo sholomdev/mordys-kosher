@@ -6,31 +6,15 @@ import Header from '@/components/Header';
 import Carousel from '@/components/Carousel';
 import LocationDetails from '@/components/LocationDetails';
 import OtherLocationLinks from '@/components/OtherLocationsLinks';
-import { locations } from '../../data';
+import { locations as allLocations } from '../../data';
 import { useRouter } from 'next/router';
 
-export default function LocationPage() {
+export default function LocationPage({ locations }) {
   const router = useRouter();
   const slug = router.query.slug;
   const location = locations.find((loc) => loc.slug === slug);
   const otherLocations = locations.filter((loc) => loc.slug !== slug);
 
-  if (location.comingSoonImage) {
-    return (
-      <Layout title={`Mordy's Kosher at ${location.name}`}>
-        <Header title={`${location.name}`} bg={location.headerImage} />
-        <div className={styles.comingSoon}>
-          <Image
-            src={location.comingSoonImage}
-            alt={location.name + ' coming soon.'}
-            width={500}
-            height={650}
-            objectFit="contain"
-          ></Image>
-        </div>
-      </Layout>
-    );
-  }
   return (
     <Layout title={`Mordy's Kosher at ${location.name}`}>
       <Header title={`${location.name}`} bg={location.headerImage} />
@@ -54,7 +38,6 @@ export default function LocationPage() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            margin: 'auto',
             gap: '5rem',
           }}
         >
@@ -63,7 +46,6 @@ export default function LocationPage() {
             alt={location.name + ' flyer.'}
             width={600}
             height={750}
-            objectFit="contain"
           ></Image>
 
           {location.menuImage && (
@@ -72,18 +54,12 @@ export default function LocationPage() {
               alt={location.name + ' menu.'}
               width={600}
               height={750}
-              objectFit="contain"
             ></Image>
           )}
         </div>
       )}
       <div className={styles.toppings}>
-        <Image
-          src={location.toppingImage}
-          fill
-          objectFit="contain"
-          alt=""
-        ></Image>
+        <Image src={location.toppingImage} fill alt=""></Image>
       </div>
 
       <OtherLocationLinks otherLocations={otherLocations}></OtherLocationLinks>
@@ -92,18 +68,18 @@ export default function LocationPage() {
 }
 
 export async function getStaticPaths() {
-  const paths = locations.map((location) => ({
+  const paths = allLocations.map((location) => ({
     params: { slug: location.slug },
   }));
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps() {
   return {
-    props: {},
+    props: { locations: allLocations },
   };
 }
