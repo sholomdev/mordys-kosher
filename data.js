@@ -246,7 +246,7 @@ const locations = [
     detailsImage: '/images/citizens-details.jpg',
     aboutImage: '/images/citizens-about.jpg',
     about: `Mordy’s Kosher and Philly have a lot in common: Food, sports, and history. Celebrate the home that Richie Ashburn and Mike Schmidt built, with our famous soft pretzel in one hand and Mordy’s Hot Dog in the other.
- \nCitizens Bank Park is one of the busiest stadiums in the world and home to the Philadelphia Phillies. The staidum has also earned a global reputation as one of the nicest tadiums in the world with amazing views from every seat.
+ \nCitizens Bank Park is one of the busiest stadiums in the world and home to the Philadelphia Phillies. The stadium has also earned a global reputation as one of the nicest tadiums in the world with amazing views from every seat.
 `,
     toppingImage: '/images/toppings.jpg',
     menuImage: '/images/citizens-menu.jpg',
