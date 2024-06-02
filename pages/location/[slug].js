@@ -39,27 +39,51 @@ export default function LocationPage({ locations }) {
             justifyContent: 'center',
             alignItems: 'center',
             gap: '5rem',
+            maxWidth: '600px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
           }}
         >
           <Image
             src={location.flyerImage}
             alt={location.name + ' flyer.'}
-            width={600}
-            height={750}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
           ></Image>
 
           {location.menuImage && (
             <Image
               src={location.menuImage}
               alt={location.name + ' menu.'}
-              width={600}
-              height={750}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
             ></Image>
           )}
         </div>
       )}
-      <div className={styles.toppings}>
-        <Image src={location.toppingImage} fill alt=""></Image>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          justifyContent: 'center',
+          maxWidth: '800px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+      >
+        <Image
+          src={location.toppingImage}
+          alt="toppings"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+        ></Image>
       </div>
 
       <OtherLocationLinks otherLocations={otherLocations}></OtherLocationLinks>
