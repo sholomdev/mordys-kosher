@@ -8,8 +8,8 @@ export default function Header({ bg = defaultBg, title }) {
         <Image
           alt=""
           src={bg}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           quality={90}
           priority={true}
         ></Image>

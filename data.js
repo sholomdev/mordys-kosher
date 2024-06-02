@@ -1,7 +1,8 @@
-const locationData = [
+const locations = [
   {
     name: 'McCormick Place',
     slug: 'mccormick-place',
+    city: 'Chicago',
     headerImage: '/images/headerBGs/mccormick-place-bg.jpg',
     cartLocation: 'Determined as the event approaches',
     hours: 'During shows, expos & conventions',
@@ -74,6 +75,7 @@ const locationData = [
   },
   {
     name: 'Soldier Field',
+    city: 'Chicago',
     slug: 'soldier-field',
     headerImage: '/images/headerBGs/soldier-field.jpg',
     cartLocation:
@@ -148,12 +150,13 @@ const locationData = [
   },
   {
     name: 'Wells Fargo Center',
+    city: 'Philadelphia',
     slug: 'wells-fargo-center',
     headerImage: '/images/headerBGs/wells-fargo.jpg',
     cartLocation:
-      '3601 S Broad St, Philadelphia, PA 19148, just off the main concourse by section 120 / 121',
+      '3601 S Broad St, Philadelphia, PA 19148, the main concourse by section 120 / 121',
     hours:
-      'When gates open (usually 2 hours before an event) until you are full. Not open Friday night and Saturday.',
+      'When gates open (usually 90 minutes before an event) until you are full. Not open Friday and Saturday.',
     phone: '215-917-0209',
     manager: '',
     contact: 'David Kushner',
@@ -228,13 +231,31 @@ const locationData = [
   {
     name: 'Citizens Bank Park',
     slug: 'citizens-bank-park',
+    city: 'Philadelphia',
     headerImage: '/images/headerBGs/citizens-bank.jpg',
-    comingSoonImage: '/images/citizens-bank-coming-soon.jpg',
+    cartLocation:
+      '1 Citizens Bank Way, Philadelphia, PA 19148, just off the main concourse by section 135 / 136',
+    hours:
+      'When gates open (usually 90 minutes before a Phillies home game) until you are full. Not open Friday  and Saturday.',
+    phone: '215-917-0209',
+    manager: '',
+    contact: 'David Kushner',
+    email: 'philly@mordyskosher.com',
+    operatedBy: 'Kosher Concessions Philly LLC',
+    kashrut: 'Community Kashrus of Greater Philadelphia, The Keystone-K',
+    detailsImage: '/images/citizens-details.jpg',
     aboutImage: '/images/citizens-about.jpg',
+    about: `Mordy’s Kosher and Philly have a lot in common: Food, sports, and history. Celebrate the home that Richie Ashburn and Mike Schmidt built, with our famous soft pretzel in one hand and Mordy’s Hot Dog in the other.
+ \nCitizens Bank Park is one of the busiest stadiums in the world and home to the Philadelphia Phillies. The staidum has also earned a global reputation as one of the nicest tadiums in the world with amazing views from every seat.
+`,
+    toppingImage: '/images/toppings.jpg',
+    menuImage: '/images/citizens-menu.jpg',
+    flyerImage: '/images/citizens-flyer.jpg',
   },
   {
     name: 'United Center',
     slug: 'united-center',
+    city: 'Chicago',
     headerImage: '/images/headerBGs/united-center-2.jpg',
     cartLocation: 'Secion 120',
     hours:
@@ -321,4 +342,4 @@ const mediaData = [
   },
 ];
 
-export { locationData, mediaData };
+export { locations, mediaData };

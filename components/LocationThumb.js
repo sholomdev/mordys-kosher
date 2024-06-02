@@ -4,20 +4,18 @@ import Link from 'next/link';
 export default function LocationThumb({ img, name, slug }) {
   return (
     <Link href={`/location/${slug}`}>
-      <a>
-        <div className={styles.locationThumb}>
-          <div className={styles.thumb}>
-            <Image
-              alt={name}
-              src={img}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-          <p className={styles.thumbTitle}>{name}</p>
+      <div className={styles.locationThumb}>
+        <div className={styles.thumb}>
+          <Image
+            alt={name}
+            src={img}
+            fill
+            style={{ objectFit: 'cover' }}
+            quality={100}
+          />
         </div>
-      </a>
+        <p className={styles.thumbTitle}>{name}</p>
+      </div>
     </Link>
   );
 }

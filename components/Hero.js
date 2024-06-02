@@ -14,8 +14,8 @@ export default function Hero() {
         <source src="/videos/fallingVeg.mp4" type="video/mp4" />
       </video>
       <h1>The Hottest Dog in Town</h1>
-      <Link href="#locations">
-        <a className={styles.btn}>View Locations</a>
+      <Link className={styles.btn} href="#locations">
+        View Locations
       </Link>
     </section>
   );

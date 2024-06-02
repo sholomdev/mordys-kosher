@@ -19,8 +19,8 @@ export default function Events({ events }) {
                 <div className={styles.imageContainer}>
                   <Image
                     src={evt.image.formats.thumbnail.url}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     objectPosition="center"
                     alt=""
                   />

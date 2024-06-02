@@ -18,7 +18,7 @@ export default function MediaPage({ articles }) {
                 <Image
                   src={article.image}
                   alt=""
-                  layout="fill"
+                  fill
                   objectFit="contain"
                 ></Image>
               </div>

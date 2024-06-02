@@ -50,8 +50,8 @@ export default function GalleryPage({ images }) {
             className={styles.imageContainer}
           >
             <Image
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               src={image.formats?.small?.url || image.url}
               alt=""
             ></Image>
@@ -71,7 +71,7 @@ export default function GalleryPage({ images }) {
         {modalImage && (
           <Image
             src={modalImage.url}
-            layout="fill"
+            fill
             objectFit="contain"
             width={modalImage.width}
             height={modalImage.height}

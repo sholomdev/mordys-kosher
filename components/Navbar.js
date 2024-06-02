@@ -1,12 +1,11 @@
-import Link from 'next/link';
 import styles from '@/styles/Navbar.module.css';
 import NavbarLinks from './NavbarLinks';
 
-export default function Navbar({ locations }) {
+export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <nav>
-        <NavbarLinks locations={locations} />
+        <NavbarLinks />
       </nav>
     </div>
   );

@@ -9,26 +9,21 @@ export default function OtherLocationLinks({ otherLocations }) {
       {otherLocations.length > 0 && (
         <div className={styles.nextLocationLinks}>
           <Link href={`/location/${otherLocations[0].slug}`}>
-            <a>
-              <span className="highlight">&lt;&nbsp;</span>{' '}
-              {otherLocations[0].name}
-            </a>
+            <span className="highlight">&lt;&nbsp;</span>{' '}
+            {otherLocations[0].name}
           </Link>
 
-          <Link href="/gallery">
-            <a
-              title="Gallery"
-              className="highlight"
-              style={{ fontSize: '1.5rem', textAlign: '', margin: '0 .5rem' }}
-            >
-              <FaThLarge />
-            </a>
+          <Link
+            title="Gallery"
+            className="highlight"
+            style={{ fontSize: '1.5rem', textAlign: '', margin: '0 .5rem' }}
+            href="/gallery"
+          >
+            <FaThLarge />
           </Link>
           <Link href={`/location/${otherLocations[1].slug}`}>
-            <a>
-              {otherLocations[1].name}
-              <span className="highlight">&nbsp;&gt;</span>
-            </a>
+            {otherLocations[1].name}
+            <span className="highlight">&nbsp;&gt;</span>
           </Link>
         </div>
       )}

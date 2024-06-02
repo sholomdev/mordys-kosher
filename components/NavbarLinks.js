@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
-export default function NavbarLinks({ mobile, locations }) {
+import { locations } from '../data.js';
+
+export default function NavbarLinks({ mobile }) {
   const logoStyle = mobile
     ? {
         display: 'none',
@@ -12,52 +14,46 @@ export default function NavbarLinks({ mobile, locations }) {
   return (
     <ul>
       <li>
-        <Link href="/#locations">
-          <a>Locations</a>
-        </Link>
+        <Link href="/#locations">Chicago</Link>
         <ul className="dropdown">
-          {locations &&
-            locations.map((location) => (
-              <li key={location.id}>
-                <Link href={`/location/${location.slug}`}>
-                  <a>{location.name}</a>
-                </Link>
+          {locations
+            .filter((location) => location.city == 'Chicago')
+            .map((location) => (
+              <li key={location.slug}>
+                <Link href={`/location/${location.slug}`}>{location.name}</Link>
               </li>
             ))}
         </ul>
       </li>
       <li>
-        <Link href="/events">
-          <a>Events</a>
-        </Link>
+        <Link href="/#locations">Philly</Link>
+        <ul className="dropdown">
+          {locations
+            .filter((location) => location.city == 'Philadelphia')
+            .map((location) => (
+              <li key={location.slug}>
+                <Link href={`/location/${location.slug}`}>{location.name}</Link>
+              </li>
+            ))}
+        </ul>
       </li>
       <li>
-        <Link href="/gallery">
-          <a>Gallery</a>
-        </Link>
+        <Link href="/gallery">Gallery</Link>
       </li>
 
       <div style={logoStyle} id="logo">
         <Link href="/">
-          <a>
-            <Image src={logo} alt="logo" width={128} height={128} />
-          </a>
+          <Image src={logo} alt="logo" width={128} height={128} />
         </Link>
       </div>
       <li>
-        <Link href="/media">
-          <a>Media</a>
-        </Link>
+        <Link href="/media">Media</Link>
       </li>
       <li>
-        <Link href="/about">
-          <a>Our Story</a>
-        </Link>
+        <Link href="/about">Our Story</Link>
       </li>
       <li>
-        <Link href="/contact">
-          <a>Contact Us</a>
-        </Link>
+        <Link href="/contact">Contact Us</Link>
       </li>
     </ul>
   );

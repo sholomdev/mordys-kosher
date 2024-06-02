@@ -14,8 +14,8 @@ export default function AboutPage() {
         <div className={styles.mordyImage}>
           <Image
             src={mordyImage}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             alt="Mordy"
             objectPosition="center top"
           />
@@ -46,8 +46,8 @@ export default function AboutPage() {
         <div className={styles.chefImage}>
           <Image
             src={aaronImage}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             alt="Chef Aaron"
           />
         </div>
@@ -78,8 +78,8 @@ export default function AboutPage() {
         <div className={styles.teamImage}>
           <Image
             src={teamImage}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             alt="The Team"
           />
         </div>

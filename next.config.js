@@ -1,10 +1,5 @@
-module.exports = {
-  reactStrictMode: true,
-  output: {
-    hashFunction: 'sha256',
-  },
-
-  images: {
-    domains: ['localhost'],
-  },
+const nextConfig = {
+  /* config options here */
 };
+
+module.exports = nextConfig;
