@@ -19,7 +19,7 @@ export default function MediaPage({ articles }) {
                   src={article.image}
                   alt=""
                   fill
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                 ></Image>
               </div>
               <div>

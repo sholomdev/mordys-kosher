@@ -300,14 +300,24 @@ const locations = [
 const mediaData = [
   {
     id: '1',
-    image: '/images/media/JE-Logo.webp',
-    title: 'New Kosher Vendor Changes the Game at Wells Fargo Center',
+    image: '/images/media/inquirer-logo-white.png',
+    title: 'Kosher food joins the lineup for Phillies games at Citizens Bank Park',
     description:
-      'Kosher Grill turns out everything from hot pretzels to Polish sausage, hot dogs, pastrami sandwiches and, of course, a must-have pastrami hot dog.',
-    link: 'https://www.jewishexponent.com/2016/02/10/new-kosher-vendor-changes-the-game-at-wells-fargo-center/',
+      'Phillies fans can visit Kosher Grill for hot pastrami on rye, hot dogs with various toppings, garlic beef sausage, potato knishes, pastrami and cabbage egg rolls, and pretzels.',
+    link: 'https://www.inquirer.com/food/restaurants/kosher-food-at-phillies-citizens-bank-park-20240617.html',
   },
   {
     id: '2',
+    image: '/images/media/JE-Logo.webp',
+    title: 'Kosher Food Stand Opens at Citizens Bank Park',
+    description:
+      'On June 17, a kosher food stand opened on the third base side at Citizens Bank Park. The stand combines ballpark favorites such as hot dogs and pretzels with kosher staples such as hot pastrami on rye and potato knishes...',
+    link: '/images/media/exponent.pdf',
+  },
+
+ 
+  {
+    id: '4',
     image: '/images/media/forward-logo.webp',
     title: 'Serving Kosher Food to the Hungry DNC Masses',
     description:
@@ -315,13 +325,22 @@ const mediaData = [
     link: 'https://forward.com/scribe/346158/serving-kosher-food-to-the-hungry-dnc-masses/',
   },
   {
-    id: '3',
+    id: '6',
     image: '/images/media/crains-logo.webp',
     title: 'Bears games offer kosher food option',
     description:
       'Add kosher food to the new concessions options at Chicago Bears games this year. The new offering is the first-ever kosher food option at Soldier Field.',
     link: 'https://www.chicagobusiness.com/article/20140922/BLOGS04/140929998/chicago-bears-games-now-offer-kosher-food-option',
   },
+  {
+    id: '6',
+    image: '/images/media/JE-Logo.webp',
+    title: 'New Kosher Vendor Changes the Game at Wells Fargo Center',
+    description:
+      'Kosher Grill turns out everything from hot pretzels to Polish sausage, hot dogs, pastrami sandwiches and, of course, a must-have pastrami hot dog.',
+    link: '',
+  },
+
 ];
 
 export { locations, mediaData };
