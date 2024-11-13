@@ -154,7 +154,7 @@ const locations = [
     slug: 'wells-fargo-center',
     headerImage: '/images/headerBGs/wells-fargo.jpg',
     cartLocation:
-      '3601 S Broad St, Philadelphia, PA 19148, the main concourse by section 120 / 121',
+      '3601 S Broad St, Philadelphia, PA 19148, Section 201 - center court on the 2nd level (Mezzanine).',
     hours:
       'When gates open (usually 90 minutes before an event) until you are full. Not open Friday and Saturday.',
     phone: '215-917-0209',
@@ -171,61 +171,43 @@ const locations = [
     toppingImage: '/images/toppings.jpg',
     menuItems: [
       {
-        name: `Mordy's Hot Dog`,
+        name: `Kosher Hot Dog`,
         note: '',
-        price: 9.19,
+        price: 9.99,
         image: '/images/food/hot-dog.jpg',
       },
       {
-        name: `Polish Sausage`,
+        name: `Pastrami Dog`,
         note: '',
-        price: 11.69,
-        image: '/images/food/hot-dog-meal.jpg',
-      },
-      {
-        name: `Broad Street Pastrami Dog`,
-        note: '',
-        price: 12.19,
+        price: 13.29,
         image: '/images/food/pastrami-dog.jpg',
       },
 
       {
-        name: `The Liberated Hot Pastrami`,
+        name: `Hot Pastrami Sandwich`,
         note: '',
-        price: 16.49,
+        price: 17.19,
         image: '/images/food/pastrami.jpg',
       },
 
       {
-        name: `Philly's Hot Pretzel`,
+        name: `Soft Pretzel`,
         note: '',
-        price: 5.79,
+        price: 6.35,
         image: '/images/food/pretzel.jpg',
       },
       {
-        name: `Chips`,
+        name: `Knish`,
         note: '',
-        price: 2.99,
-        image: '/images/food/chips.jpg',
+        price: 6.99,
+        image: '/images/food/knish.jpg',
       },
       {
-        name: `Soda`,
+        name: `Pastrami Egg Roll`,
         note: '',
-        price: 7.19,
-        image: '/images/food/pop.jpg',
-      },
-      {
-        name: `Beer`,
-        note: '',
-        price: 15.39,
-        image: '/images/food/beer.jpg',
-      },
-      {
-        name: `Water`,
-        note: '',
-        price: 5.25,
-        image: '/images/food/water.jpg',
-      },
+        price: 9.99,
+        image: '/images/food/egg-roll.jpg',
+      }
     ],
   },
   {
