@@ -23,13 +23,12 @@
   font-weight: 300;
   text-align: justify;
 }
-.chefImage,
-.mordyImage,
-.teamImage {
+.leftImage,
+.rightImage {
   position: relative;
   min-height: 20rem;
 }
-.chefImage {
+.rightImage {
   grid-column: 2;
 }
 

@@ -3,6 +3,7 @@ import styles from '@/styles/About.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
 import mordyImage from '../public/images/mordy-about.jpg';
+import robertImage from '../public/images/robert-about.jpg';
 import aaronImage from '../public/images/aaron-about.jpg';
 import teamImage from '../public/images/team-about.jpg';
 import headerBg from '../public/images/headerBGs/about-bg.jpg';
@@ -11,7 +12,9 @@ export default function AboutPage() {
     <Layout title="Our Story">
       <Header title="Our Story" bg={headerBg}></Header>
       <div className={styles.about}>
-        <div className={styles.mordyImage}>
+
+        {/* ---------------About Mordy--------------- */}
+        <div className={styles.leftImage}>
           <Image
             src={mordyImage}
             fill
@@ -43,7 +46,33 @@ export default function AboutPage() {
             flavor is simultaneously unique, authentic, and familiar.
           </p>
         </div>
-        <div className={styles.chefImage}>
+        
+          {/* ---------------About Robert--------------- */}
+          <div className={styles.rightImage}>
+          <Image
+            src={robertImage}
+            fill
+            style={{ objectFit: 'cover' }}
+            alt="Robert"
+            objectPosition="center top"
+          />
+        </div>
+        <div>
+          <h2> Robert Montoya</h2> <h3>General Manager</h3>
+          <p>
+          Robert Montoya is a proud alumnus of Robert Morris University in downtown Chicago, where he studied Business Management. He was also in the marching band and baseball team, showcasing his commitment to both teamwork and leadership. Robert is known for his outgoing personality with a strong foundation in servant leadership.
+          </p>
+          <p>
+          Today, Robert serves as the General Manager of Mordy’s Kosher, which operates concessions at the iconic United Center, Soldier Field, and McCormick Place. Whether serving up delicious meals or leading a team to ensure the best food experiences, he combines his love for sports and business to deliver exceptional results.
+          </p>
+          <p>
+          When he's not making sure fans are well-fed at Chicago’s biggest venues, Robert loves hanging out with his wife and daughter and soaking up quality family time in Colombia, where his wife’s side of the family is from. He also loves jamming to Spanish or English music, making the most of every moment.
+
+          </p>
+        </div>
+
+{/* ---------------About Aaron--------------- */}
+      <div className={styles.leftImage}>
           <Image
             src={aaronImage}
             fill
@@ -51,7 +80,6 @@ export default function AboutPage() {
             alt="Chef Aaron"
           />
         </div>
-
         <div>
           <h2>Aaron Gordon</h2>
           <h3>Executive Chef</h3>
@@ -75,7 +103,9 @@ export default function AboutPage() {
             Aaron loves tinkering with old cars.
           </p>
         </div>
-        <div className={styles.teamImage}>
+
+        {/* ---------------About Team--------------- */}
+        <div className={styles.rightImage}>
           <Image
             src={teamImage}
             fill
