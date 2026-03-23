@@ -3,11 +3,12 @@ import Image from 'next/image';
 import styles from '@/styles/Location.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
-import Carousel from '@/components/Carousel';
+// import Carousel from '@/components/Carousel';
 import LocationDetails from '@/components/LocationDetails';
 import OtherLocationLinks from '@/components/OtherLocationsLinks';
 import { locations as allLocations } from '../../data';
 import { useRouter } from 'next/router';
+import LocationMenu from '@/components/LocationMenu';
 
 export default function LocationPage({ locations }) {
   const router = useRouter();
@@ -18,41 +19,33 @@ export default function LocationPage({ locations }) {
   return (
     <Layout title={`Mordy's Kosher at ${location.name}`}>
       <Header title={`${location.name}`} bg={location.headerImage} />
-      <LocationDetails location={location} />
-      <div className={styles.parallax}></div>
-      {location.menuItems && (
-        <div className={styles.menu}>
-          <h1>Menu</h1>
-          <h4>
-            <span className="highlight">*</span>all prices include tax
-          </h4>
-          <Carousel menuItems={location.menuItems}></Carousel>
-        </div>
-      )}
+      {location.brandingHeader && (
+  <div className={styles.brandingBanner}>
+    <div className={styles.brandingImageWrapper}>
+      <Image 
+        src={location.brandingHeader} 
+        alt="Kosher Grill Branding"
+        width={1600} // Increased for higher resolution
+        height={533}
+        priority
+        unoptimized // Bypasses optimization to keep it razor-sharp
+        className={styles.brandingLogo}
+      />
+    </div>
+  </div>
+)}
       {location.flyerImage && (
-        <div
-          style={{
-            marginTop: '5rem',
-            marginBottom: '5rem',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '5rem',
-            maxWidth: '600px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
-          <Image
-            src={location.flyerImage}
-            alt={location.name + ' flyer.'}
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: '100%', height: 'auto' }}
-          ></Image>
-
+        
+                
+<div className={styles.flyerContainer}>
+      <Image
+        src={location.flyerImage}
+        alt={location.name + ' flyer.'}
+        width={800}
+        height={1000}
+        style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+       ></Image>
+    
           {location.menuImage && (
             <Image
               src={location.menuImage}
@@ -65,6 +58,16 @@ export default function LocationPage({ locations }) {
           )}
         </div>
       )}
+      <LocationDetails location={location} />
+      <div className={styles.parallax}></div>
+      {location.menuItems && (
+        <div className={styles.menu}>
+          <h1>Menu</h1>
+                    {/* <Carousel menuItems={location.menuItems}></Carousel> */}
+          <LocationMenu location={location}></LocationMenu>
+        </div>
+      )}
+      
       <div
         style={{
           display: 'flex',
@@ -86,7 +89,7 @@ export default function LocationPage({ locations }) {
         ></Image>
       </div>
 
-      <OtherLocationLinks otherLocations={otherLocations}></OtherLocationLinks>
+      {/* <OtherLocationLinks otherLocations={otherLocations}></OtherLocationLinks> */}
     </Layout>
   );
 }

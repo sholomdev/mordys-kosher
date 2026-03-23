@@ -1,11 +1,11 @@
 import styles from '@/styles/MediaPage.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
-import bg from '../public/images/headerBGs/news-bg.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { mediaData } from 'data';
 export default function MediaPage({ articles }) {
+  const bg = "https://res.cloudinary.com/dsjy8ydj7/image/upload/mordys-kosher/headerBGs/news-bg.jpg";
   return (
     <Layout>
       <Header title="News" bg={bg} />

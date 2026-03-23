@@ -101,3 +101,74 @@
     display: none;
   }
 }
+
+.flyerContainer {
+  margin: 3rem auto;
+  max-width: 600px; /* Keeps the flyer from being massive on desktop */
+  padding: 10px;
+  background: #222; /* Matches your dark gray theme */
+  border: 1px solid #444;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Location.module.css */
+
+.certLink {
+  color: #a01010; /* Mordy's Red */
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.certLink:hover {
+  opacity: 0.8;
+}
+
+.certModalContent {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.certTitle {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.certImageWrapper {
+  position: relative;
+  width: 100%;
+  /* Certificates are usually portrait (8.5x11), so we set a tall aspect ratio */
+  aspect-ratio: 3 / 4; 
+  max-height: 80vh;
+}
+
+/* Location.module.css */
+
+.brandingBanner {
+  width: 100%;
+  /* Remove the background-color: #000 and border-bottom */
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brandingImageWrapper {
+  width: 90%;
+  max-width: 700px;
+  /* SCREEN MODE: This makes the black background of the image transparent */
+  /* so it blends perfectly into your dark gray site theme. */
+  mix-blend-mode: screen;
+}
+
+.brandingLogo {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Optional: Increase contrast slightly if it looks washed out after blending */
+  filter: contrast(1.05); 
+}

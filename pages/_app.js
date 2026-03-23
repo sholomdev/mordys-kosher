@@ -1,13 +1,17 @@
 import '../styles/globals.css';
 import '../styles/react-burger-menu.css';
-import NextNProgress from 'nextjs-progressbar';
+import { PagesProgressBar as ProgressBar } from 'next-nprogress-bar';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      {' '}
-      <NextNProgress height={4} color="#f16609" />
+    <>   
       <Component {...pageProps} />
+       <ProgressBar
+        height="4px"
+        color="#fffd00"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
     </>
   );
 }

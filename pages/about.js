@@ -6,8 +6,8 @@ import mordyImage from '../public/images/mordy-about.jpg';
 import robertImage from '../public/images/robert-about.jpg';
 import aaronImage from '../public/images/aaron-about.jpg';
 import teamImage from '../public/images/team-about.jpg';
-import headerBg from '../public/images/headerBGs/about-bg.jpg';
 export default function AboutPage() {
+  const headerBg = "https://res.cloudinary.com/dsjy8ydj7/image/upload/mordys-kosher/headerBGs/about-bg.jpg";
   return (
     <Layout title="Our Story">
       <Header title="Our Story" bg={headerBg}></Header>
@@ -18,9 +18,10 @@ export default function AboutPage() {
           <Image
             src={mordyImage}
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectPosition: 'top', objectFit: 'cover' }} 
+  // 2. Add sizes to stop the performance warning
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="Mordy"
-            objectPosition="center top"
           />
         </div>
         <div>
@@ -52,9 +53,10 @@ export default function AboutPage() {
           <Image
             src={robertImage}
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectPosition: 'top', objectFit: 'cover' }} 
+  // 2. Add sizes to stop the performance warning
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="Robert"
-            objectPosition="center top"
           />
         </div>
         <div>
@@ -76,7 +78,9 @@ export default function AboutPage() {
           <Image
             src={aaronImage}
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectPosition: 'top', objectFit: 'cover' }} 
+  // 2. Add sizes to stop the performance warning
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="Chef Aaron"
           />
         </div>
@@ -109,7 +113,9 @@ export default function AboutPage() {
           <Image
             src={teamImage}
             fill
-            style={{ objectFit: 'cover' }}
+          style={{ objectPosition: 'top', objectFit: 'cover' }} 
+  // 2. Add sizes to stop the performance warning
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="The Team"
           />
         </div>

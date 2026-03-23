@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html data-scroll-behavior="smooth">
         <Head />
         <body>
           <Main />

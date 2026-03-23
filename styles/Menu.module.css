@@ -1,0 +1,136 @@
+
+/* AI generated */
+/* Menu.module.css */
+
+/* Menu.module.css */
+
+.menuGrid {
+  display: grid;
+  /* Changed 280px to 220px to allow more cards per row on desktop */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+/* Ensure the main container isn't squeezing the grid */
+.menuSection {
+  width: 100%;
+  max-width: 1200px; /* Limits the menu width so it doesn't look 'stretched' on ultra-wide monitors */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menuCard {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.menuCard:hover {
+  transform: translateY(-4px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  /* 4:3 ratio looks great in multi-column grids */
+  aspect-ratio: 4 / 3; 
+  background: #f4f4f4;
+  border-bottom: 1px solid #eee;
+}
+
+.cardContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.itemName {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.itemNote {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 4px 0 12px 0;
+}
+
+.itemPrice {
+  font-weight: 800;
+  color: #a01010; /* Mordy's Red */
+  font-size: 1.1rem;
+}
+
+/* Menu.module.css */
+
+.minimalDrinks {
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 800px;
+  /* Keeps the section centered on screen, but content inside is left-aligned */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drinksTitle {
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  /* High contrast for dark background */
+  color: #FFFFFF; 
+  margin-bottom: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Subtle divider */
+  padding-bottom: 8px;
+}
+
+.drinksList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Removes the centered alignment */
+  align-items: flex-start; 
+}
+
+.drinkItem {
+  font-size: 1.1rem;
+  /* Pure white for the main text */
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.drinkName {
+  font-weight: 600;
+}
+
+.drinkNote {
+  font-size: 0.95rem;
+  /* Light gray/silver for the notes to create hierarchy */
+  color: #CCCCCC; 
+  margin-left: 8px;
+}
+
+/* Mobile: Stack note under name for better legibility */
+@media (max-width: 600px) {
+  .drinkItem {
+    display: flex;
+    flex-direction: column;
+  }
+  .drinkNote {
+    margin-left: 0;
+    margin-top: 4px;
+    font-size: 0.85rem;
+  }
+}

@@ -2,7 +2,10 @@ import Image from 'next/image';
 import styles from '@/styles/Location.module.css';
 import { FaClock, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import { ImPhone } from 'react-icons/im';
+import Modal from './Modal';
+import { useState } from 'react';
 export default function LocationDetails({ location }) {
+  const [showCert, setShowCert] = useState(false);
   return (
     <div className={styles.location}>
       <div className={styles.details}>
@@ -73,15 +76,31 @@ export default function LocationDetails({ location }) {
               {location.operatedBy}
             </div>
           </li>
-          <li>
-            <div></div>
-            {location.kashrut && (
-              <div>
-                <span className="highlight">Kosher Supervision:&nbsp; </span>
-                {location.kashrut}
-              </div>
-            )}
-          </li>
+         <li>
+  <div></div>
+  {location.kashrut && (
+    <div>
+      <span className="highlight">Kosher Supervision:&nbsp; </span>
+      
+      <span 
+        // 1. Only apply the 'certLink' style if the image exists
+        className={location.kashrutImage ? styles.certLink : ''} 
+        
+        // 2. Only trigger the modal if the image exists
+        onClick={location.kashrutImage ? () => setShowCert(true) : undefined}
+        
+        // 3. Only show the 'button' role to screen readers if it's actually clickable
+        role={location.kashrutImage ? "button" : "text"}
+        
+        style={{ cursor: location.kashrutImage ? 'pointer' : 'default' }}
+      >
+        {location.kashrut} 
+        {/* 4. Optional: Add a visual hint like an icon or text only if clickable */}
+        {location.kashrutImage && " (View Certificate)"}
+      </span>
+    </div>
+  )}
+</li>
         </ul>
       </div>
       <div className={styles.imageContainer}>
@@ -106,6 +125,23 @@ export default function LocationDetails({ location }) {
         <h2>About Us</h2>
         <p>{location.about}</p>
       </div>
+      <Modal show={showCert} onClose={() => setShowCert(false)}>
+        <div className={styles.certModalContent}>
+          <h2 className={styles.certTitle}>{location.name} Certification</h2>
+          {location.kashrutImage ? (
+            <div className={styles.certImageWrapper}>
+              <Image 
+                src={location.kashrutImage} 
+                alt="Kosher Certificate" 
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          ) : (
+            <p>Certificate image coming soon.</p>
+          )}
+        </div>
+      </Modal>
     </div>
   );
 }

@@ -3,9 +3,9 @@ import { useForm } from 'react-hook-form';
 import styles from '@/styles/ContactPage.module.css';
 import Layout from '@/components/Layout';
 import Header from '@/components/Header';
-import bg from '../public/images/headerBGs/contact-bg.jpg';
 
 export default function CotactPage() {
+  const bg = "https://res.cloudinary.com/dsjy8ydj7/image/upload/mordys-kosher/headerBGs/contact-bg.jpg";
   const honeyPot = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const {

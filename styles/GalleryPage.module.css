@@ -1,28 +1,28 @@
-.gallery {
-  width: 90vw;
+/* Container for the whole masonry block */
+.container {
+  width: 95vw;
   max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  margin: 2rem auto;
 }
 
-.gallery img {
-  width: 100%;
-}
-
+/* The wrapper for each individual image */
 .imageContainer {
-  width: 250px;
-  height: 250px;
   position: relative;
   cursor: pointer;
+  width: 100%; /* Take up full width of the masonry column */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
-  .imageContainer {
-    width: 150px;
-    height: 150px;
-  }
+.imageContainer:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+/* Modal styling to ensure the image has a place to live */
+.modalContent {
+  position: relative;
+  width: 90vw;
+  height: 80vh;
 }
