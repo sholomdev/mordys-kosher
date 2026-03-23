@@ -4,14 +4,13 @@ import Hero from '@/components/Hero';
 import AboutMordy from '@/components/AboutMordy';
 import LocationThumbs from '@/components/LocationThumbs';
 
-export default function Home({ locations, events }) {
+export default function Home({ locations }) {
   return (
     <Layout>
       <div className={styles.homePage}>
         <Hero></Hero>
         <AboutMordy />
         <LocationThumbs></LocationThumbs>
-        {/* <Events events={events}>Upcoming Events</Events> */}
       </div>
     </Layout>
   );
