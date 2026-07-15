@@ -63,7 +63,7 @@ export default function LocationDetails({ location }) {
           {location.contact && (
             <li>
  <span className="highlight">
-              <FaUserTie /> 
+              <FaUserTie />
               </span>
               <div></div>
               <div>

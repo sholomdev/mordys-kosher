@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@next/third-parties": "^16.2.10",
-    "@sendgrid/mail": "^8.1.3",
     "cloudinary-build-url": "^0.2.4",
     "embla-carousel-react": "^8.1.3",
     "next": "16.2.10",
     "next-nprogress-bar": "^2.4.7",
+    "postmark": "^5.1.0",
     "react": "19.2.4",
     "react-burger-menu": "^3.1.0",
     "react-dom": "19.2.4",
