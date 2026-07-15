@@ -5,7 +5,7 @@ const postmarkClient = new postmark.ServerClient(process.env.POSTMARK_SERVER_TOK
 async function sendEmail(req, res) {
   const emailData = {
     From: 'sholom@sholom.dev',
-    To: 'sholom@sholom.dev',
+    To: 'sam@sholom.dev',
     Subject: 'New message submitted via mordyskosher.com',
     HtmlBody:  `
          <ul>
