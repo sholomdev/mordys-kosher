@@ -4,6 +4,7 @@ import { FaClock, FaMapMarkerAlt, FaEnvelope, FaWhatsapp, FaUserTie } from 'reac
 import { ImPhone } from 'react-icons/im';
 import Modal from './Modal';
 import { useState } from 'react';
+import { pushEvent } from '@/lib/gtm';
 export default function LocationDetails({ location }) {
   const [showCert, setShowCert] = useState(false);
   return (
@@ -86,6 +87,11 @@ export default function LocationDetails({ location }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.certLink}
+                  onClick={() =>
+                    pushEvent('whatsapp_click', {
+                      location_name: location.name,
+                    })
+                  }
                 >
                   WhatsApp group
                 </a>
@@ -112,7 +118,16 @@ export default function LocationDetails({ location }) {
         className={location.kashrutImage ? styles.certLink : ''} 
         
         // 2. Only trigger the modal if the image exists
-        onClick={location.kashrutImage ? () => setShowCert(true) : undefined}
+        onClick={
+          location.kashrutImage
+            ? () => {
+                setShowCert(true);
+                pushEvent('kashrut_cert_view', {
+                  location_name: location.name,
+                });
+              }
+            : undefined
+        }
         
         // 3. Only show the 'button' role to screen readers if it's actually clickable
         role={location.kashrutImage ? "button" : "text"}

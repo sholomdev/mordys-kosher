@@ -9,12 +9,24 @@ import OtherLocationLinks from '@/components/OtherLocationsLinks';
 import { locations as allLocations } from '../../data';
 import { useRouter } from 'next/router';
 import LocationMenu from '@/components/LocationMenu';
+import { useEffect } from 'react';
+import { pushEvent } from '@/lib/gtm';
 
 export default function LocationPage({ locations }) {
   const router = useRouter();
   const slug = router.query.slug;
   const location = locations.find((loc) => loc.slug === slug);
   const otherLocations = locations.filter((loc) => loc.slug !== slug);
+
+  useEffect(() => {
+    if (!location) return;
+    pushEvent('location_view', {
+      location_name: location.name,
+      location_slug: location.slug,
+      city: location.city,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location?.slug]);
 
   return (
     <Layout title={`Mordy's Kosher at ${location.name}`}>
