@@ -9,10 +9,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.10",
     "@sendgrid/mail": "^8.1.3",
     "cloudinary-build-url": "^0.2.4",
     "embla-carousel-react": "^8.1.3",
-    "next": "16.2.1",
+    "next": "16.2.10",
     "next-nprogress-bar": "^2.4.7",
     "react": "19.2.4",
     "react-burger-menu": "^3.1.0",
@@ -23,7 +24,7 @@
     "sharp": "^0.33.4"
   },
   "devDependencies": {
-    "eslint": "9.4.0",
+    "eslint": "9.39.5",
     "eslint-config-next": "16.2.1"
   }
 }
