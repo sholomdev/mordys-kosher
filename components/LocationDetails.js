@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '@/styles/Location.module.css';
-import { FaClock, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import { FaClock, FaMapMarkerAlt, FaEnvelope, FaWhatsapp, FaUserTie } from 'react-icons/fa';
 import { ImPhone } from 'react-icons/im';
 import Modal from './Modal';
 import { useState } from 'react';
@@ -61,10 +61,35 @@ export default function LocationDetails({ location }) {
           )}
           {location.contact && (
             <li>
+ <span className="highlight">
+              <FaUserTie /> 
+              </span>
               <div></div>
               <div>
                 <span className="highlight">Contact:&nbsp; </span>{' '}
                 {location.contact}
+              </div>
+            </li>
+          )}
+
+          {location.minyanWhatsapp && (
+            <li>
+              <span className="highlight">
+                <FaWhatsapp />
+              </span>
+              <div>
+                <span className="highlight">Minyanim:&nbsp; </span>
+                For anyone planning to attend Phillies home games this
+                season, feel free to join the minyanim at Citizens Bank Park{' '}
+                <a
+                  href={location.minyanWhatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.certLink}
+                >
+                  WhatsApp group
+                </a>
+                .
               </div>
             </li>
           )}
