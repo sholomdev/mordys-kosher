@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
 import { mediaData } from 'data';
+import { pushEvent } from '@/lib/gtm';
 export default function MediaPage({ articles }) {
   const bg = "https://res.cloudinary.com/dsjy8ydj7/image/upload/mordys-kosher/headerBGs/news-bg.jpg";
   return (
@@ -30,7 +31,7 @@ export default function MediaPage({ articles }) {
                   rel="noreferrer"
                   href={article.link}
                   className={styles.btn}
-                >
+                 onClick={()=>pushEvent('article_click', { article_title: article.title, article_url: article.link   })}>
                   Read More
                 </a>
               </div>

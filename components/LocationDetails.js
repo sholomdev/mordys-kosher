@@ -36,7 +36,15 @@ export default function LocationDetails({ location }) {
               </span>
               <div>
                 <span className="highlight">Phone:&nbsp; </span>{' '}
-                {location.phone}
+                <a 
+                href={`tel:${location.phone.replace(/[^\d+]/g, '')}`}
+                onClick={()=>{pushEvent(
+                  'phone_click', {
+                    phone: location.phone.replace(/[^\d+]/g, ''),
+                    location_name: location.name,
+                  } )}}
+                >
+                  {location.phone}</a>
               </div>
             </li>
           )}
@@ -56,7 +64,13 @@ export default function LocationDetails({ location }) {
               </span>
               <div>
                 <span className="highlight">Email:&nbsp; </span>{' '}
-                {location.email}
+                <a 
+                href={`mailto:${location.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={()=>{
+                  pushEvent('email_click', 
+                    {email: location.email, location_name: location.name})}}>{location.email}</a>
               </div>
             </li>
           )}
